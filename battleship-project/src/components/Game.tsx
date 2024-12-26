@@ -4,10 +4,14 @@ import style from './styles/Board.module.css'
 import Board from './sub-components/rows.tsx'
 import BoardSmall from './sub-components/Board-smaller.tsx'
 
-export const Game = () => {
+interface GameProps {
+    onSquareClick: (position: string) => void;
+  }
+
+export const Game: React.FC<GameProps> = ({ onSquareClick }) => {
     return(
         <div className={styles.game}>
-            <Board />
+            <Board onSquareClick={onSquareClick}/>
          </div>
     )
 }

@@ -1,13 +1,13 @@
 .card{
-    margin-top: 110px;
+    margin-top: 97px;
     margin-left: 15px;
-    height: 130px;
+    height: 90px;
     padding: 10px;
     border: 1px solid white;
     border-radius: 5px;
     background-color: black;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
     width: 310px;
     font-size: 2em;
 }

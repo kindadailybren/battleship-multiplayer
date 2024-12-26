@@ -1,9 +1,14 @@
 import styles from './styles/Moves.module.css';
 
-const Moves = () => {
+interface MovesProps {
+    clickedPosition: string | null;
+  }
+
+const Moves: React.FC<MovesProps> = ({ clickedPosition }) => {
     return (
         <div className={styles.card}>
-            Enemy Move:
+            Enemy Move:<br></br>
+            {clickedPosition}
         </div>
     )
 }
