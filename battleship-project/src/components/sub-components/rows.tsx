@@ -5,7 +5,7 @@ const Board = () => {
   return (
     <>
       <div className={styles.row}>
-        <Squares />
+        <Squares target={true}/>
         <Squares />
         <Squares />
         <Squares />

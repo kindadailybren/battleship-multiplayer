@@ -1,11 +1,11 @@
-import styles from "../styles/Games.module.css";
+import styles from "../styles/Board.module.css";
 import React, { useState } from "react";
 
 interface SquareProps {
     target?: boolean;
 }
 
-const Squares: React.FC<SquareProps> = ({target}) =>{
+const SquareSmall: React.FC<SquareProps> = ({target}) =>{
     let [style, setStyle] = useState(styles.square);
 
     const handleClick = () => {
@@ -18,4 +18,4 @@ const Squares: React.FC<SquareProps> = ({target}) =>{
     )
 }
 
-export default Squares;
+export default SquareSmall;

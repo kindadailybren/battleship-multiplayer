@@ -7,7 +7,7 @@
     padding: 20px;
     border: 3px solid black;
     border-radius: 10px;
-    background-image: url(../sea.jpg);
+    background-image: url(../media/ocean.jpg);
     width: 520px;
     height: max-content;
 }
@@ -29,14 +29,27 @@
 .square:hover{
     /*Background image from the assets folder*/
     /*make the appearance of the bg image smoother*/
-    background-image: url(../circle.jpg);
+    background-image: url(../media/circle.jpg);
     background-size: cover;
     cursor: pointer;
 }
 
 .squareHit{
     width: 40px;
-    background-image: url(../circle.jpg);
+    background-image: url(../media/circleHit.png);
+    background-size: cover;
+    cursor: pointer;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 3px 2px black;
+    transition: all 0.15s ease;
+}
+
+
+.squareMiss{
+    width: 40px;
+    background-image: url(../media/circle.jpg);
     background-size: cover;
     cursor: pointer;
     height: 40px;

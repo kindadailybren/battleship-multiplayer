@@ -1,0 +1,57 @@
+.games{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-image: url(../media/ocean.jpg);
+    width: 310px;
+    height: 310px;
+}
+.row{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.square {
+    width: 20px; /* Adjust the width to make it smaller */
+    height: 20px; /* Adjust the height to make it smaller */
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 9px; /* Adjust the border-radius to match the new size */
+    box-shadow: 2px 1px black; /* Adjust the box-shadow to match the new size */
+    transition: all 0.15s ease;
+}
+
+.square:hover {
+    background-image: url(../media/circle.jpg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+.squareHit {
+    width: 20px; /* Adjust the width to make it smaller */
+    height: 20px; /* Adjust the height to make it smaller */
+    background-image: url(../media/circleHit.png);
+    background-size: cover;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 10px; /* Adjust the border-radius to match the new size */
+    box-shadow: 2px 1px black; /* Adjust the box-shadow to match the new size */
+    transition: all 0.15s ease;
+}
+
+.squareMiss {
+    width: 20px; /* Adjust the width to make it smaller */
+    height: 20px; /* Adjust the height to make it smaller */
+    background-image: url(../media/circle.jpg);
+    background-size: cover;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 10px; /* Adjust the border-radius to match the new size */
+    box-shadow: 2px 1px black; /* Adjust the box-shadow to match the new size */
+    transition: all 0.15s ease;
+}
