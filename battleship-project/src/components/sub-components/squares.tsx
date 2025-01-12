@@ -4,7 +4,7 @@ import React, { useState } from "react";
 interface SquareProps {
     target?: boolean;
     position: string;
-    onClick?: (position:string) => void;
+    onClick?: (position:string, target?:boolean) => void;
 }
 
 const Squares: React.FC<SquareProps>= ({target, position, onClick}) =>{
@@ -12,7 +12,7 @@ const Squares: React.FC<SquareProps>= ({target, position, onClick}) =>{
 
     const handleClick = () => {
         setStyle(target ? styles.squareHit : styles.squareMiss)
-        if(onClick) onClick(position)
+        if(onClick && (style == styles.square)) onClick(position, target)
     }
 
     return (

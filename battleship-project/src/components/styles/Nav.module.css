@@ -1,0 +1,68 @@
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #000000;
+    color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 40px;
+}
+.title{
+    font-size: 0.8rem;
+    padding-left: 40px;
+    position: relative;
+    display: inline-block;
+}
+.navLinks{
+    padding-right: 50px;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+.link{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.link:hover{
+    color: #2a9ff9;
+}
+.title::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 20px;
+    top: 50px;
+    left: 37px;
+    background-color: #2a9ff9;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.title:hover::after {
+    visibility: visible;
+    width: 91%;
+}
+.inputBox {
+    width: 100px;
+    padding: 5px;
+    border: 1px solid #2a9ff9;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1em;
+    background-color: black;
+    color: white;
+}
+
+@keyframes underline {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}

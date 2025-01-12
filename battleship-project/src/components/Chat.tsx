@@ -2,7 +2,11 @@
 import styles from './styles/Chat.module.css'
 import { useState, useEffect } from 'react';
 
-const Chat = () => {
+interface ChatProps {
+    name: string;
+}
+
+const Chat: React.FC<ChatProps> = ({ name }) => {
     let [message, setMessage] = useState<string[]>([]);
     let [inputValue, setInputValue] = useState('');
 
@@ -12,7 +16,7 @@ const Chat = () => {
 
     const handleSendClick = () => {
         if(inputValue.trim() !== ''){
-            setMessage([...message, inputValue]);
+            setMessage([...message, `${name}: ${inputValue}`]);
             setInputValue('');
         }
     }
@@ -39,7 +43,7 @@ const Chat = () => {
                     <h3 className={styles.header}>Chat Room</h3>
                     <div className={styles.chatMessages}>
                         {message.map((msg, index) => (
-                            <div key={index}>Player: {msg}</div>
+                            <div key={index}>{msg}</div>
                         ))}
                     </div>
                 </div>

@@ -2,12 +2,12 @@ import styles from "../styles/Games.module.css";
 import Squares from "./squares.tsx";
 
 interface BoardProps {
-  onSquareClick: (position: string) => void;
+  onSquareClick: (position: string, target?:boolean) => void;
 }
 
 const Board:React.FC<BoardProps> = ({ onSquareClick }) => {
-  const handleSquareClick = (position:string) => {
-    onSquareClick(position);
+  const handleSquareClick = (position:string, target?:boolean) => {
+    onSquareClick(position, target);
   }
   return (
     <>

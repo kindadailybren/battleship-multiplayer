@@ -5,7 +5,7 @@ import Board from './sub-components/rows.tsx'
 import BoardSmall from './sub-components/Board-smaller.tsx'
 
 interface GameProps {
-    onSquareClick: (position: string) => void;
+    onSquareClick: (position: string, target?:boolean) => void;
   }
 
 export const Game: React.FC<GameProps> = ({ onSquareClick }) => {
