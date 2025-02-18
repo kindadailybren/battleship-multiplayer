@@ -6,12 +6,13 @@ import BoardSmall from './sub-components/Board-smaller.tsx'
 
 interface GameProps {
     onSquareClick: (position: string, target?:boolean) => void;
+    prepPhase: boolean;
   }
 
-export const Game: React.FC<GameProps> = ({ onSquareClick }) => {
+export const Game: React.FC<GameProps> = ({ onSquareClick, prepPhase }) => {
     return(
-        <div className={styles.game}>
-            <Board onSquareClick={onSquareClick}/>
+        <div className= {styles.game}>
+            <Board onSquareClick={onSquareClick} prepPhase={prepPhase} />
          </div>
     )
 }

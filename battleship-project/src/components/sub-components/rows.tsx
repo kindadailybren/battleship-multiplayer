@@ -3,9 +3,10 @@ import Squares from "./squares.tsx";
 
 interface BoardProps {
   onSquareClick: (position: string, target?:boolean) => void;
+  prepPhase: boolean;
 }
 
-const Board:React.FC<BoardProps> = ({ onSquareClick }) => {
+const Board:React.FC<BoardProps> = ({ onSquareClick, prepPhase }) => {
   const handleSquareClick = (position:string, target?:boolean) => {
     onSquareClick(position, target);
   }

@@ -26,7 +26,7 @@ const NavBar: React.FC<NavBarProps> = ({ onNameChange }) => {
     return(
         <div className={styles.navBar}>
             <div className={styles.title}>
-                <h1>BATTLESHIP MUTIPLAYER</h1>
+                <h1>BATTLESHIP GAME</h1>
             </div>
             <nav className={styles.navLinks}>
             {isEditing ? ( //If True
